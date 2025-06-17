@@ -1,0 +1,32 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Sensor
+metadata:
+  name: velero-webhook-sensor
+  namespace: argo-events
+spec:
+  eventBusName: default
+  template:
+    serviceAccountName: argo-events-sa
+
+  dependencies:
+    - name: velero-backup-dep
+      eventSourceName: velero-events
+      eventName: velero-backup-status
+
+  triggers:
+    - template:
+        name: send-status-to-webhook
+        http:
+          url: https://webhook.site/d866f82a-65aa-4ec1-955e-7fbd918bbd67
+          method: POST
+          headers:
+            Content-Type: application/json
+          payload:
+            - src:
+                dependencyName: velero-backup-dep
+                dataKey: body.metadata.name
+              dest: backup_name
+            - src:
+                dependencyName: velero-backup-dep
+                dataKey: body.status.phase
+              dest: status
