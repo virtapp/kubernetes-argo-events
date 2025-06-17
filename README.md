@@ -8,9 +8,27 @@ Argo Events is an event-driven workflow automation framework for Kubernetes whic
 
 🎯  Key Features
 ```
-✅ ArgoCD Provider in Terraform
-✅ ArgoCD Application Deployment using Terraform
-✅ ArgoCD Repository using Terraform
+✅ Supports events from 20+ event sources
+✅ Ability to customize business-level constraint logic for workflow automation
+✅ Manage everything from simple, linear, real-time to complex, multi-source events
+✅ Supports Kubernetes Objects, Argo Workflow, AWS Lambda, Serverless, etc. as triggers
+✅ CloudEvents compliant
+```
+
+🧩  Triggers
+```
+Argo Workflows
+Standard K8s Objects
+HTTP Requests / Serverless Workloads (OpenFaaS, Kubeless, KNative etc.)
+AWS Lambda
+NATS Messages
+Kafka Messages
+Slack Notifications
+Azure Event Hubs Messages
+Argo Rollouts
+Custom Trigger / Build Your Own Trigger
+Apache OpenWhisk
+Log Trigge
 ```
 
 🚀 
@@ -21,41 +39,7 @@ terraform plan -var-file="template.tfvars"
 terraform apply -var-file="template.tfvars" -auto-approve
 ```
 
-🧩 Ingress Example 
 
-```
-resource "kubernetes_ingress_v1" "my_app_ingress" {
-  metadata {
-    name      = "my-app-ingress"
-    namespace = "default"
-    annotations = {
-      "kubernetes.io/ingress.class" = "nginx"
-    }
-  }
 
-  spec {
-    rule {
-      host = "my-app.example.com"
 
-      http {
-        path {
-          path     = "/"
-          path_type = "Prefix"
-
-          backend {
-            service {
-              name = "my-app-service"  # the service Argo CD deploys
-              port {
-                number = 80
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-
-  depends_on = [argocd_application.my_app]  # ensure Argo CD app is created first
-}
-```
 
