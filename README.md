@@ -1,6 +1,5 @@
 ![events-thumbnail](https://github.com/user-attachments/assets/e8b6afc2-6eea-4ddb-a6c6-2969e9e33051)
-![Uploading argo-events-architecture.png…]()
-
+![argo-events-architecture](https://github.com/user-attachments/assets/8597f49a-0b00-4045-b48a-32dada887ee4)
 
 
 ## Argo Events | The Event-driven Workflow Automation Framework 🚀
