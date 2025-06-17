@@ -1,4 +1,5 @@
 ![events-thumbnail](https://github.com/user-attachments/assets/e8b6afc2-6eea-4ddb-a6c6-2969e9e33051)
+![Uploading argo-events-architecture.png…]()
 
 
 
