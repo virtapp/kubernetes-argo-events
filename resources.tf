@@ -10,7 +10,7 @@ resource "helm_release" "argo_events" {
   repository = "https://argoproj.github.io/argo-helm"
   chart      = "argo-events"
   namespace  = "argo-events"
-  version    = "2.7.1"  # Replace with the latest if needed
+  version    = "2.4.9"  # Replace with the latest if needed
   create_namespace = true
 
   #values = [
