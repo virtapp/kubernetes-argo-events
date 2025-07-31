@@ -12,7 +12,7 @@ provider "null" {}
 
 resource "null_resource" "install_k3s" {
   provisioner "local-exec" {
-    command = "bash /modules/k3s/install_k3s.sh ${var.node_role} ${var.disable_components} ${var.k3s_version}"
+    command = "bash ./modules/k3s/install_k3s.sh ${var.node_role} ${var.disable_components} ${var.k3s_version}"
   }
 
   triggers = {
