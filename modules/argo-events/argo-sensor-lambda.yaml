@@ -5,8 +5,8 @@ metadata:
   namespace: argo-events
 type: Opaque
 stringData:
-  aws-access-key-id: AKIAWN26JO6OZARGKHE4
-  aws-secret-access-key: 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
+  aws-access-key-id: sfsfsdfsfrervrdvdv
+  aws-secret-access-key: sfretege48784fjkjfkjhdjkghkjdhkdryrur
 
 ---
 
@@ -27,8 +27,8 @@ spec:
     - template:
         name: invoke-lambda
         awsLambda:
-          functionName: CertificateManagerIntegrationWithZabbix
-          region: il-central-1
+          functionName: IntegrationWithMinio
+          region: us-west-2
           accessKey:
             key: aws-access-key-id
             name: aws-creds
