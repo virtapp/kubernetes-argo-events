@@ -2,7 +2,7 @@
 ![argo-events-architecture](https://github.com/user-attachments/assets/8597f49a-0b00-4045-b48a-32dada887ee4)
 
 
-## Argo Events | The Event-driven Workflow Automation Framework 🚀
+## Argo Events | Kubernetes ☸️
 Argo Events is an event-driven workflow automation framework for Kubernetes which helps you trigger K8s objects, Argo Workflows, Serverless workloads, etc. on events from a variety of sources like webhooks, S3, schedules, messaging queues, gcp pubsub, sns, sqs, etc.
 
 
