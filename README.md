@@ -12,7 +12,7 @@ Argo Events is an event-driven workflow automation framework for Kubernetes whic
 ✅ Ability to customize business-level constraint logic for workflow automation
 ✅ Manage everything from simple, linear, real-time to complex, multi-source events
 ✅ Supports Kubernetes Objects, Argo Workflow, AWS Lambda, Serverless, etc. as triggers
-✅ CloudEvents compliant
+✅ CloudEvents Compliant
 ```
 
 🧩  Triggers
