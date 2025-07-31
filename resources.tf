@@ -13,8 +13,8 @@ resource "helm_release" "argo_events" {
   version    = "2.6.3"  # Replace with the latest if needed
   create_namespace = true
 
-  values = [
-    file("argo-events-values.yaml")  # optional, see below
-  ]
+  #values = [
+  #  file("argo-events-values.yaml")  # optional, see below
+  #]
   depends_on = [null_resource.install_k3s]
 }
