@@ -16,5 +16,5 @@ resource "helm_release" "argo_events" {
   #values = [
   #  file("argo-events-values.yaml")  # optional, see below
   #]
-  depends_on = [null_resource.install_k3s]
+  depends_on = [null_resource.k3s_status]
 }
