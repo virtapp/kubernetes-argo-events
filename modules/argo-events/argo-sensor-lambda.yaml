@@ -27,7 +27,7 @@ spec:
     - template:
         name: invoke-lambda
         awsLambda:
-          functionName: IntegrationWithMinio
+          functionName: IntegrationWithVelero
           region: us-west-2
           accessKey:
             key: aws-access-key-id
