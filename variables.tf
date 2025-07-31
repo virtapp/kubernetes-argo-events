@@ -8,3 +8,8 @@ variable "node_role" {
   type    = string
   default = "server"
 }
+
+variable "disable_components" {
+  type    = string
+  default = "--disable traefik --disable local-storage"
+}
