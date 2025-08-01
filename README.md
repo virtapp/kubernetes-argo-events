@@ -6,29 +6,23 @@
 Argo Events is an event-driven workflow automation framework for Kubernetes which helps you trigger K8s objects, Argo Workflows, Serverless workloads, etc. on events from a variety of sources like webhooks, S3, schedules, messaging queues, gcp pubsub, sns, sqs, etc.
 
 
-🎯  Key Features
+🧱 Core Components
 ```
-✅ Supports events from 20+ event sources
-✅ Ability to customize business-level constraint logic for workflow automation
-✅ Manage everything from simple, linear, real-time to complex, multi-source events
-✅ Supports Kubernetes Objects, Argo Workflow, AWS Lambda, Serverless, etc. as triggers
-✅ CloudEvents Compliant
+✅ EventSource ( Defines an external system to listen to e.g. GitHub Webhook, S3, Kafka, Cron, etc.)
+✅ Sensor ( Defines what to do when an event is received e.g. trigger a Workflow or Job )
+✅ EventBus ( Provides pub/sub message delivery internally between EventSources and Sensors e.g. NATS )
+
 ```
 
-🧩  Triggers
+🔌 Supported Event Sources
 ```
-Argo Workflows
-Standard K8s Objects
-HTTP Requests / Serverless Workloads (OpenFaaS, Kubeless, KNative etc.)
-AWS Lambda
-NATS Messages
-Kafka Messages
-Slack Notifications
-Azure Event Hubs Messages
-Argo Rollouts
-Custom Trigger / Build Your Own Trigger
-Apache OpenWhisk
-Log Trigge
+GitHub / GitLab / Bitbucket Webhooks
+S3 (MinIO, AWS)
+Kafka / NATS / MQTT / AMQP
+Webhooks (HTTP)
+Calendar/Cron (scheduled events)
+GCP Pub/Sub, AWS SNS/SQS
+Kubernetes CRDs (like Velero backup events)
 ```
 
 🚀 
