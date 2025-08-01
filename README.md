@@ -8,8 +8,8 @@ Argo Events is an event-driven workflow automation framework for Kubernetes whic
 
 🧱 Core Components
 ```
-✅ EventSource ( Defines an external system to listen to e.g. GitHub Webhook, S3, Kafka, Cron, etc.)
-✅ Sensor ( Defines what to do when an event is received e.g. trigger a Workflow or Job )
+✅ EventSource ( Defines an external system to listen to GitHub Webhook, S3, Kafka, Cron, etc.)
+✅ Sensor ( Defines what to do when an event is received Trigger a Workflow or Job )
 ✅ EventBus ( Provides pub/sub message delivery internally between EventSources and Sensors e.g. NATS )
 
 ```
